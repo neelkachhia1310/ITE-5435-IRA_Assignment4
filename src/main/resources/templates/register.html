@@ -1,0 +1,93 @@
+<form action="#" th:action="@{/register}" th:object="${user}" method="post">
+
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" th:field="*{firstName}">
+    <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" style="color:red"></span>
+    <br>
+
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" th:field="*{lastName}">
+    <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" style="color:red"></span>
+    <br>
+
+    <label for="company">Company</label>
+    <input type="text" id="company" th:field="*{company}">
+    <span th:if="${#fields.hasErrors('company')}" th:errors="*{company}" style="color:red"></span>
+    <br>
+
+    <label for="address">Address</label>
+    <input type="text" id="address" th:field="*{address}">
+    <span th:if="${#fields.hasErrors('address')}" th:errors="*{address}" style="color:red"></span>
+    <br>
+    <label for="city">City</label>
+<input type="text" id="city" th:field="*{city}">
+<span th:if="${#fields.hasErrors('city')}" th:errors="*{city}" style="color:red"></span>
+<br>
+    
+<label for="state">State</label>
+<select id="state" th:field="*{state}">
+    <option value="">Select State</option>
+    <option value="California">California</option>
+    <option value="Texas">Texas</option>
+    <option value="New York">New York</option>
+    <option value="Florida">Florida</option>
+    <option value="Illinois">Illinois</option>
+</select>
+<span th:if="${#fields.hasErrors('state')}" th:errors="*{state}" style="color:red"></span>
+<br>
+
+<label for="country">Country</label>
+<select id="country" th:field="*{country}">
+    <option value="">Select Country</option>
+    <option value="USA">USA</option>
+    <option value="Canada">Canada</option>
+    <option value="UK">UK</option>
+    <option value="Australia">Australia</option>
+    <option value="India">India</option>
+</select>
+<span th:if="${#fields.hasErrors('country')}" th:errors="*{country}" style="color:red"></span>
+<br>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" th:field="*{email}">
+    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color:red"></span>
+    <br>
+
+    <label for="phoneNumber">Phone Number</label>
+    <input type="text" id="phoneNumber" th:field="*{phoneNumber}">
+    <span th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}" style="color:red"></span>
+    <br>
+
+    <label for="mealPreference">Meal Preference</label>
+    <select id="mealPreference" th:field="*{mealPreference}">
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="Non-Vegetarian">Non-Vegetarian</option>
+        <option value="Vegan">Vegan</option>
+    </select>
+    <span th:if="${#fields.hasErrors('mealPreference')}" th:errors="*{mealPreference}" style="color:red"></span>
+    <br>
+
+    <label>Payment Mode:</label>
+    <input type="checkbox" th:field="*{paymentModes}" value="Cash"> Cash
+    <input type="checkbox" th:field="*{paymentModes}" value="Cheque"> Cheque
+    <input type="checkbox" th:field="*{paymentModes}" value="Demand Draft"> Demand Draft
+    <span th:if="${#fields.hasErrors('paymentModes')}" th:errors="*{paymentModes}" style="color:red"></span>
+    <br>
+
+    <label for="ddChequeNo">DD/Cheque No</label>
+    <input type="text" id="ddChequeNo" th:field="*{ddChequeNo}">
+    <span th:if="${#fields.hasErrors('ddChequeNo')}" th:errors="*{ddChequeNo}" style="color:red"></span>
+    <br>
+
+    <label for="drawnOn">Drawn On</label>
+    <input type="text" id="drawnOn" th:field="*{drawnOn}">
+    <span th:if="${#fields.hasErrors('drawnOn')}" th:errors="*{drawnOn}" style="color:red"></span>
+    <br>
+
+    <label for="payableAt">Payable At</label>
+    <input type="text" id="payableAt" th:field="*{payableAt}">
+    <span th:if="${#fields.hasErrors('payableAt')}" th:errors="*{payableAt}" style="color:red"></span>
+    <br>
+
+    <input type="submit" value="Register">
+</form>
